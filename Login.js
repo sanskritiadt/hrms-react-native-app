@@ -39,7 +39,7 @@ export default function New({ navigation }) {
       })
       .then((data) => {
         //const storeddata = AsyncStorage.setItem('access_token',data );
-        console.log("Stored Data", storeddata);
+       // console.log("Stored Data", storeddata);
         console.log("Login successful:", data);
         Alert.alert("Login", "Login successful");
         setLogin({ email: "", password: "" });

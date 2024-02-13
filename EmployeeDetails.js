@@ -430,3 +430,213 @@ const styles = StyleSheet.create({
 //     backgroundColor: "brown",
 //   },
 // });
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "#fff",
+//     alignItems: "center",
+//     justifyContent: "center",
+//     paddingTop: StatusBar.currentHeight,
+//   },
+//   image: {
+//     marginBottom: 40,
+//   }, box: {
+//     width: 320,
+//     height: 400,
+//     backgroundColor: '#fff',
+//     borderRadius: 30,
+//     shadowColor: '#000',
+//     shadowOffset: {
+//       width: 0,
+//       height: 2,
+//     },
+//     shadowOpacity: 0.25,
+//     shadowRadius: 3.84,
+//     elevation: 5,
+//   },
+//   inputView: {
+//     backgroundColor: "pink",
+//     borderRadius: 30,
+//     width: "70%",
+//     height: 45,
+//     marginBottom: 15,
+//   },
+
+//   TextInput: {
+//     height: 50,
+//     flex: 1,
+//     padding: 10,
+//     width: "auto",
+//     marginLeft: 20,
+//   },
+//   forgot_button: {
+//     height: 30,
+//     marginBottom: 30,
+//   },
+//   loginBtn: {
+//     width: "80%",
+//     borderRadius: 25,
+//     height: 50,
+//     alignItems: "center",
+//     justifyContent: "center",
+//     marginTop: 40,
+//     backgroundColor: "brown",
+//   },
+//   scrollView: {
+//     marginHorizontal: 20,
+//   },
+// });
+// import {
+//   StyleSheet,
+//   Text,
+//   View,
+//   TextInput,
+//   TouchableOpacity,
+//   Pressable,
+//   Alert,
+
+// } from "react-native";
+// export default function EmployeeDetails({navigation}) {
+//     const [selectedDate, setSelectedDate] = useState(new Date());
+//   const [temp, setTemp] = useState({
+//     name: "",
+//     empID: "",
+//     workingHours:"",
+//     date:""
+//   });
+
+//   function handleData () {
+//     fetch('https://65c3148bf7e6ea59682bed24.mockapi.io/empData', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(temp),
+//     })
+//     .then(response => {
+//       if (!response.ok) {
+//         throw new Error('Login failed');
+//       }
+//       return response.json();
+//     })
+//     .then(data => {
+//       console.log('Login successful:', data);
+//       Alert.alert("Employee Details","Data Submitted successfully");
+//       setTemp({
+//         name: "",
+//         empID: "",
+//         workingHours: "",
+//         date: ""
+//       });
+//       navigation.navigate('EmpAttendence')
+//     })
+
+//     .catch(error => {
+//       console.error('Login error:', error);
+//       Alert.alert("Login Failed", "Please check your credentials and try again.")
+//     });
+
+//   };
+
+//   return (
+//     <View style={styles.container}>
+//       <StatusBar style="auto" />
+//       {/* <Text>Email: {temp.name}</Text>
+//       <Text>Password: {temp.empID}</Text> */}
+//       <View style={styles.inputView}>
+//         <TextInput
+//           style={styles.TextInput}
+//           placeholder="Employee Name"
+//           placeholderTextColor="#003f5c"
+//           onChangeText={(name) => setTemp({ ...temp, name:name })}
+//           value={temp.name}
+//         />
+//       </View>
+//       <View style={styles.inputView}>
+//         <TextInput
+//           style={styles.TextInput}
+//           placeholder="Employee ID"
+//           placeholderTextColor="#003f5c"
+//           keyboardType="numeric"
+//           onChangeText={(empID) => setTemp({ ...temp, empID:empID })}
+//           value={temp.empID}
+//         />
+//       </View>
+
+//       <View style={styles.inputView}>
+//         <TextInput
+//           style={styles.TextInput}
+//           placeholder="Working hours"
+//           placeholderTextColor="#003f5c"
+//           keyboardType="numeric"
+//           onChangeText={(workingHours) => setTemp({ ...temp, workingHours:workingHours })}
+//           value={temp.workingHours}
+//         />
+//       </View>
+
+//       <View style={styles.inputView}>
+//       <DateTimePicker
+//         date={selectedDate}
+//         display='spinner'
+//         mode="date"
+//         value={selectedDate}
+//       />
+//         <TextInput
+//           style={styles.TextInput}
+//           placeholder="Date"
+//           keyboardType="numeric"
+//           mode="date"
+//           placeholderTextColor="#003f5c"
+//           onChangeText={(date) => setTemp({ ...temp, date:date })}
+//           value={temp.date}
+//         />
+
+//       </View>
+//       <TouchableOpacity style={styles.loginBtn}  onPress={handleData}>
+//         <Pressable style={styles.loginText}>
+//           <Text>Submit</Text>
+//         </Pressable>
+//       </TouchableOpacity>
+//     </View>
+//   );
+// }
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "#fff",
+//     alignItems: "center",
+//     justifyContent: "center",
+//   },
+//   image: {
+//     marginBottom: 40,
+//   },
+//   inputView: {
+//     backgroundColor: "pink",
+//     borderRadius: 30,
+//     width: "70%",
+//     height: 45,
+//     marginBottom: 15,
+
+//   },
+//   TextInput: {
+//     height: 50,
+//     flex: 1,
+//     padding: 10,
+//     width:'auto',
+//     marginLeft:20
+//   },
+//   forgot_button: {
+//     height: 30,
+//     marginBottom: 30,
+//   },
+//   loginBtn: {
+//     width: "80%",
+//     borderRadius: 25,
+//     height: 50,
+//     alignItems: "center",
+//     justifyContent: "center",
+//     marginTop: 40,
+//     backgroundColor: "brown",
+//   },
+// });
